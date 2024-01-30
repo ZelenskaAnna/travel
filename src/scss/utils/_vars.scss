@@ -1,0 +1,33 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet-large: 1024px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+$mobile-small: 380px;
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+:root {
+  --html-fs: 1px;
+  --ff-Montserrat: "Montserrat", sans-serif;
+  --ff-Inter: "Inter", sans-serif;
+  --ff-Poppins: "Poppins", sans-serif;
+  --ff-Roboto: "Roboto", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+  --c-white: #fff;
+
+  --travel-name: normal 600 24px / normal var(--ff-Inter);
+  --travel-adress: normal 400 18px / normal var(--ff-Roboto);
+  --travel-price-text: normal 400 16px / normal var(--ff-Roboto);
+  --travel-price: normal 500 26px / normal var(--ff-Roboto);
+  --travel-currency: normal 500 20px / normal var(--ff-Roboto);
+  --travel-overview: normal 600 22px / normal var(--ff-Inter);
+  --travel-details: normal 600 16px / normal var(--ff-Inter);
+  --travel-value: normal 500 18px / normal var(--ff-Roboto);
+  --travel-desc: normal 500 18px/27.034px var(--ff-Roboto);
+}
