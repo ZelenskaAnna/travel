@@ -1,8 +1,18 @@
+@import "./components/HomeTravelInfo.scss";
+
+.home {
+}
+
+
 .home-header {
   display: flex;
   justify-content: space-between;
   padding: 34px 26px 0 26px;
   gap: 20px;
+  @include desktop {
+   padding-top: 99px;
+      }
+    
 
   &__hi {
     color: #2f2f2f;
@@ -118,6 +128,7 @@
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
+    transition: var(--transition);
     cursor: pointer;
 
     &.is-active {
@@ -146,6 +157,7 @@
   flex: 0 0 270px;
   position: relative;
 
+
   &:last-child {
     margin-right: 26px;
   }
@@ -153,6 +165,7 @@
   img {
     border-radius: 30px;
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -173,11 +186,11 @@
   padding: 0;
   cursor: pointer;
 
-  svg {
-    &:hover {
-      path {
-        fill: red;
-      }
-    }
-  }
+  // svg {
+  //   &:hover {
+  //     path {
+  //       fill: red;
+  //     }
+  //   }
+  // }
 }

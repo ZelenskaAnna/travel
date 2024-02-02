@@ -26,6 +26,36 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 64px;
+
+  @include desktop {
+top: 0;
+gap: 60px;
+justify-content: flex-end;
+  }
+
+
+  & a {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff4a4a;
+      bottom: -17px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  .active {
+    &::after {
+      transform: translateX(-50%) scale(1);
+    }
+  }
 }
 li {
   list-style: none;
@@ -33,4 +63,10 @@ li {
 ul {
   margin: 0;
   padding: 0;
+}
+
+
+.container {
+  @include tablet-small {
+  }
 }

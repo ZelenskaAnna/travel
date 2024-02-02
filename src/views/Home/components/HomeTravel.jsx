@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { HeartIcon } from "../../../components/Icons/HeartIcon";
+import { travelData } from '/src/views/js/TravelsData.js';
+import { HomeTravelInfo } from "./HomeTravelInfo";
+
+
 
 export const HomeTravel = () => {
   const container = {
@@ -31,38 +35,21 @@ export const HomeTravel = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.li variants={item} className="home-travel-item">
-          <HeartIcon />
-          <Link to="/fuji">
-            <img src="/travel.png" alt="travel" />
-          </Link>
-        </motion.li>
-        <motion.li variants={item} className="home-travel-item">
-          <HeartIcon />
-          <Link to="/andes">
-            <img src="/travel2.png" alt="travel" />
-          </Link>
-        </motion.li>
-        <motion.li variants={item} className="home-travel-item">
-          <Link to="/travel">
-            <img src="/travel.png" alt="travel" />
-          </Link>
-        </motion.li>
-        <motion.li variants={item} className="home-travel-item">
-          <Link to="/travel">
-            <img src="/travel.png" alt="travel" />
-          </Link>
-        </motion.li>
-        <motion.li variants={item} className="home-travel-item">
-          <Link to="/travel">
-            <img src="/travel.png" alt="travel" />
-          </Link>
-        </motion.li>
-        <motion.li variants={item} className="home-travel-item">
-          <Link to="/travel">
-            <img src="/travel.png" alt="travel" />
-          </Link>
-        </motion.li>
+        {travelData.map((itemTravel) => (
+          <motion.li
+            key={itemTravel.id}
+            variants={item}
+            className="home-travel-item"
+          >
+            <HeartIcon />
+            <Link
+              to={{ pathname: '/travel/' + itemTravel.id, state: { id: itemTravel.id } }}
+            >
+              <img src={itemTravel.pathImg} alt="travel" />
+              <HomeTravelInfo itemTravel={itemTravel} />
+            </Link>
+          </motion.li>
+        ))}
       </motion.ul>
     </div>
   );

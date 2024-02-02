@@ -5,7 +5,7 @@ import { HomeTravel } from "./components/HomeTravel";
 
 export const Home = () => {
   return (
-    <div className="home">
+    <div className="container home">
       <HomeHeader />
       <HomeFilter />
       <HomePlaces />
